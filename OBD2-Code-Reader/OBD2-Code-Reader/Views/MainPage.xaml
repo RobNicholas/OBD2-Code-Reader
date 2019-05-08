@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="OBD2_Code_Reader.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OBD2_Code_Reader"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}"
+    >
+
+    
+    
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+               
+        <Grid Grid.Row="1" Grid.Column="0" >
+            <controls:RadialGauge x:Name="RadialSpeed" Value="70" Minimum="0" 
+	Maximum="1000" TickSpacing="100" ScaleWidth="20" Unit="Mph" TickBrush="RoyalBlue" TrailBrush="#4b77be"
+	ScaleTickBrush="Black"
+	NeedleWidth="3" TickLength="20">
+            </controls:RadialGauge>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" >
+            <controls:RadialGauge x:Name="RadialRpm" Value="70" Minimum="0" 
+	Maximum="1000" TickSpacing="100" ScaleWidth="20" Unit="Rpm" TickBrush="RoyalBlue" TrailBrush="#4b77be"
+	ScaleTickBrush="Black"
+	NeedleWidth="3" TickLength="20">
+            </controls:RadialGauge>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2" >
+            <controls:RadialGauge x:Name="RadialFuel" Value="70" Minimum="0" 
+	Maximum="1000" TickSpacing="100" ScaleWidth="20" Unit="Fuel" TickBrush="RoyalBlue" TrailBrush="#4b77be"
+	ScaleTickBrush="Black"
+	NeedleWidth="3" TickLength="20">
+            </controls:RadialGauge>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="0" >
+            <controls:RadialGauge x:Name="RadialOilPressure" Value="70" Minimum="0" 
+	Maximum="1000" TickSpacing="100" ScaleWidth="20" Unit="OilPressure" TickBrush="RoyalBlue" TrailBrush="#4b77be"
+	ScaleTickBrush="Black"
+	NeedleWidth="3" TickLength="20">
+            </controls:RadialGauge>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1" >
+            <controls:RadialGauge x:Name="RadialCoolantTemp" Value="70" Minimum="0" 
+	Maximum="1000" TickSpacing="100" ScaleWidth="20" Unit="CoolantTemp" TickBrush="RoyalBlue" TrailBrush="#4b77be"
+	ScaleTickBrush="Black"
+	NeedleWidth="3" TickLength="20">
+            </controls:RadialGauge>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="2" >
+            <controls:RadialGauge x:Name="RadialFuelPressure" Value="70" Minimum="0" 
+	Maximum="1000" TickSpacing="100" ScaleWidth="20" Unit="FuelPressure" TickBrush="RoyalBlue" TrailBrush="#4b77be"
+	ScaleTickBrush="Black"
+	NeedleWidth="3" TickLength="20">
+            </controls:RadialGauge>
+        </Grid>
+
+        <Grid Grid.Row="3" >
+            <Button
+            Name="StartButton"
+            Click="StartButton_Click">
+                Start
+            </Button>
+        </Grid>
+    </Grid>
+</Page>
